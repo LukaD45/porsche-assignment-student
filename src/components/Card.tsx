@@ -33,34 +33,57 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          "max-w-sm md:max-w-md bg-white rounded-xl shadow-sm hover:shadow-xl hover:transition-all transform  duration-400 ease-in-out hover:scale-102 p-8",
+          "min-w-[280px] max-w-[750px] w-full bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-102 p-6 sm:p-8",
           className
         )}
         {...props}
       >
-        <Badge className="mb-6">{fuelType}</Badge>
+        <Badge className="mb-4 sm:mb-6">{fuelType}</Badge>
 
-        <Image
-          width={600}
-          height={100}
-          src={carImage}
-          alt={modelName}
-          className="w-82 h-24 object-cover"
-        />
-
-        <div className="mt-10 mb-10">
-          <h3 className="text-3xl font-semibold mb-1">{modelName}</h3>
-          <p className="text-sm text-gray-500 mb-5 mt-4">{description}</p>
-          <p className="text-2xl mb-2 font-bold">{acceleration} s</p>
-          <p className="text-gray-500 text-sm mb-4">
-            Acceleration 0 - 100 km/h with Sport Chrono Package
-          </p>
-          <p className=" text-2xl mb-2 font-bold">{power}</p>
-          <p className="text-gray-500 text-sm mb-4">Power (kW) / Power (PS)</p>
-          <p className=" text-2xl mb-2 font-bold">{topSpd} km/h</p>
-          <p className="text-gray-500 text-sm mb-4">Top speed</p>
+        <div className="relative w-full aspect-[3/1] md:aspect-[3/1] mb-6">
+          <Image
+            src={carImage}
+            alt={modelName}
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 10vw, 400px"
+          />
         </div>
-        <Button variant="primary" className="text-lg" size="lg">
+
+        <div className="mb-8">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-1">
+            {modelName}
+          </h3>
+          <p className="text-sm h-20 md:pr-5 text-gray-500 my-4">
+            {description}
+          </p>
+
+          <div className="space-y-4">
+            <div>
+              <p className="text-xl font-bold">{acceleration} s</p>
+              <p className="text-gray-500 text-sm">
+                Acceleration 0 - 100 km/h with Sport Chrono Package
+              </p>
+            </div>
+
+            <div>
+              <p className="text-xl font-bold">{power}</p>
+              <p className="text-gray-500 text-sm">Power (kW) / Power (PS)</p>
+            </div>
+
+            <div>
+              <p className="text-xl font-bold">{topSpd} km/h</p>
+              <p className="text-gray-500 text-sm">Top speed</p>
+            </div>
+          </div>
+        </div>
+
+        <Button
+          variant="primary"
+          className="w-full text-base sm:text-lg"
+          size="lg"
+          onClick={() => {}}
+        >
           Select model
         </Button>
       </div>

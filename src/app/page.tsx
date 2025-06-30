@@ -1,48 +1,119 @@
+"use client";
+
+import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Input } from "@/components/Input";
+import { Select } from "@/components/Select";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const cars = [
   {
     fuelType: "Electro",
-    carImage: "/porsche.jpg",
-    modelName: "Porsche Taycan",
+    carImage: "/taycan.avif",
+    modelName: "Taycan",
     description:
-      "An electric sports car with impressive performance and range.",
-    acceleration: 2.8,
-    power: "560 kW",
-    topSpd: 260,
+      "(Performance battery) Eleotrio energy consumption oombined (model range): 19.1 - 16.7 kWh/100 km, Co2-emissions oombined (model range): 0 g/km",
+    acceleration: 4.8,
+    power: "300 kW / 408 PS",
+    topSpd: 230,
+  },
+  {
+    fuelType: "Gasoline",
+    carImage: "/gt3-rs.avif",
+    modelName: "911 GT3 RS",
+    description:
+      "Fuel consumption combined: 13.2 l/100 km (preliminary value), CO2-emissions combined (WLTP)*: 299 g/km (preliminary value), CO2 Class: G (preliminary value)",
+    acceleration: 3.2,
+    power: "386 kW / 525 PS",
+    topSpd: 296,
+  },
+  {
+    fuelType: "Gasoline",
+    carImage: "/911-carrera-gts.avif",
+    modelName: "911 Carrera GTS",
+    description:
+      "Fuel consumption combined (model range): 11.0 – 10.4 l/100 km, CO₂-emissions combined (model range): 248 – 236 g/km",
+    acceleration: 3.0,
+    power: "398 kW / 541 PS",
+    topSpd: 312,
   },
   {
     fuelType: "Hybrid",
-    carImage: "/911-carrera.avif",
-    modelName: "Panamera 4 E-Hybrid",
+    carImage: "/panamera-4.avif",
+    modelName: "Panamera 4",
     description:
-      "A luxurious plug-in hybrid sedan that combines power and efficiency.",
+      "Fuel consumption combined (model range): 11.0 – 10.2 l/100 km, CO₂-emissions combined (model range): 250 – 230 g/km",
     acceleration: 4.4,
-    power: "340 kW",
+    power: "260 kW / 353 PS",
     topSpd: 280,
   },
   {
     fuelType: "Gasoline",
-    carImage: "/porsche.jpg",
-    modelName: "911 Carrera GTS",
-    description: "The iconic 911 with raw performance and timeless design.",
-    acceleration: 3.3,
-    power: "353 kW / 420 PS",
-    topSpd: 312,
+    carImage: "/718-spyder-rs.avif",
+    modelName: "718 Spyder RS",
+    description:
+      "Fuel consumption combined: 12.7 l/100 km (preliminary value), CO2-emissions combined (WLTP)*: 288 g/km (preliminary value), CO2 Class: G (preliminary value)",
+    acceleration: 3.4,
+    power: "368 kW / 500 PS",
+    topSpd: 308,
   },
 ];
 
 export default function ShowcasePage() {
+  const [fuelType, setFuelType] = useState<string>("");
+
+  const filteredCars = fuelType
+    ? cars.filter((car) => car.fuelType === fuelType)
+    : cars;
+
   return (
-    <main className="min-h-screen px-6 py-16 bg-gray-100">
-      <h1 className="text-4xl font-bold text-center mb-12">Model Showcase</h1>
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-center">
-        {cars.map((car, index) => (
-          <Card key={index} {...car} />
-        ))}
-      </div>
-      <Input className="mt-20" placeholder="Unesi e-mail adresu" />
-    </main>
+    <div>
+      <nav className="flex justify-around items-center h-30">
+        <Link className="p-2 rounded-sm hover:bg-gray-300" href="#">
+          Menu
+        </Link>
+        <Link href="https://www.porsche.com/international/">
+          <Image width={300} height={300} src="/logo.png" alt="Porsche logo" />
+        </Link>
+        <Button variant="secondary" size="sm">
+          <Link href="https://www.porsche.com/international/locations-and-contact/">
+            Contact us
+          </Link>
+        </Button>
+      </nav>
+      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 sm:py-16 bg-gray-100">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-12">
+          Model Showcase
+        </h1>
+
+        <div className="mb-10 max-w-md mx-auto w-full">
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Odaberite vrstu motora:
+          </label>
+          <Select
+            options={[
+              { label: "All", value: "" },
+              { label: "Electro", value: "Electro" },
+              { label: "Hybrid", value: "Hybrid" },
+              { label: "Gasoline", value: "Gasoline" },
+            ]}
+            value={fuelType}
+            onChange={setFuelType}
+          />
+        </div>
+
+        <div className="grid pl-5 pr-5 gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-3 justify-items-center">
+          {filteredCars.map((car, index) => (
+            <Card key={index} {...car} />
+          ))}
+        </div>
+
+        <div className="mt-20 max-w-md mx-auto w-full">
+          <Input placeholder="Unesi e-mail adresu" />
+        </div>
+      </main>
+    </div>
   );
 }
