@@ -11,7 +11,7 @@ export const buttonVariants = cva(
         primary:
           "bg-[#010205] border-2 border-solid border-[#010205] text-white hover:opacity-70   ",
         secondary:
-          "bg-white text-black  border-solid border-2 border-[#010205] hover:bg-gray-200 hover:border-gray-500 focus:ring-black",
+          "bg-white text-black  border-solid border-2 border-[#010205] hover:bg-gray-100 hover:border-gray-500 focus:ring-black",
         disabled: "bg-gray-200 text-gray-500 cursor-not-allowed",
       },
       size: {
