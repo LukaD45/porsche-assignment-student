@@ -79,6 +79,7 @@ export default function ShowcasePage() {
           <Menu className=" mr-2" />
           <p className="hidden sm:block">Menu</p>
         </Link>
+
         <Link
           className="hidden sm:block"
           href="https://www.porsche.com/international/"
@@ -97,20 +98,22 @@ export default function ShowcasePage() {
             alt="Porsche logo"
           />
         </Link>
+
         <Button variant="secondary" size="sm">
           <Link href="https://www.porsche.com/international/locations-and-contact/">
             Contact
           </Link>
         </Button>
       </nav>
-      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 sm:py-16 bg-gray-100">
+
+      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 sm:py-16 ">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-12">
-          Model Showcase
+          Model overview
         </h1>
 
-        <div className="mb-10 max-w-md mx-auto w-full">
-          <label className="block mb-2 text-sm font-medium text-gray-700">
-            Odaberite vrstu motora:
+        <div className="mb-10 mr-5 pl-5  flex justify-start items-start md:justify-end md:items-end flex-col  ">
+          <label className="block  mb-2 text-sm  font-medium text-gray-700">
+            Sort by engine type:
           </label>
           <Select
             options={[
@@ -129,11 +132,83 @@ export default function ShowcasePage() {
             <Card key={index} {...car} />
           ))}
         </div>
+        <Button
+          className="flex mx-auto mt-10 px-20"
+          size="lg"
+          onClick={() => {}}
+        >
+          Add Model
+        </Button>
 
         <div className="mt-20 max-w-md mx-auto w-full">
           <Input placeholder="Unesi e-mail adresu" />
         </div>
       </main>
+
+      <footer className="bg-black text-white px-8 sm:px-6 lg:px-20 py-12 sm:py-16 ">
+        <div className="mb-10">
+          <h1 className="text-xl font-bold">Current Region / Language</h1>
+          <p className="text-md mt-5">International / English</p>
+        </div>
+        <div className="mb-10 flex flex-col sm:flex-row">
+          <div>
+            <h1 className="text-xl font-bold">Locations & Contacts</h1>
+            <p className="text-md mt-3 mb-10">Do you have any quesions?</p>
+            <Button
+              variant="secondary"
+              className="px-24 py-4 text-lg rounded-md"
+              size="lg"
+            >
+              Get in touch
+            </Button>
+          </div>
+          <div className="sm:mx-10 mx-0 mt-10 sm:mt-0">
+            <h1 className="text-xl font-bold">Social Media</h1>
+            <p className="text-md mt-3 mb-10">
+              Get in touch with us via social media.
+            </p>
+          </div>
+        </div>
+        <div className="mb-10">
+          <h1 className="text-xl font-bold">Company</h1>
+
+          <p className="text-md mt-5">Investor relations</p>
+          <p className="text-md mt-2">Compliance</p>
+        </div>
+        <hr />
+
+        <p className="mt-10 text-md">
+          * If the values are given as ranges, these do not relate to a single,
+          individual vehicle and do not constitute part of the offer. They are
+          intended solely as a means of comparing different vehicle models and
+          refer to the product portfolio that is available on the German market.
+          Extra features and accessories (attachments, tyre formats etc.) can
+          change relevant vehicle parameters such as weight, rolling resistance
+          and aerodynamics and, in addition to weather and traffic conditions,
+          as well as individual handling, can affect the fuel consumption,
+          energy consumption, CO₂ emissions, range and performance values of a
+          car.
+        </p>
+        <p className="mt-4 text-md">
+          ** Important information about the all-electric Porsche models can be
+          found{" "}
+          <Link
+            className="underline"
+            target="_blank"
+            href="https://www.porsche.com/international/accessoriesandservice/porscheservice/vehicleinformation/bev/"
+          >
+            here
+          </Link>
+          .
+        </p>
+        <Image
+          className="flex mx-auto mt-20 mb-20"
+          width={250}
+          height={300}
+          src="/logo-white.jpg"
+          alt="Porsche logo"
+        />
+      </footer>
     </div>
   );
 }

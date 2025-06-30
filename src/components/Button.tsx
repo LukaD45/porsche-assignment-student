@@ -10,12 +10,12 @@ export const buttonVariants = cva(
         primary:
           "bg-[#010205] border-2 border-solid border-[#010205] text-white hover:opacity-70   ",
         secondary:
-          "bg-transparent text-black border-solid border-2 border-[#010205]  hover:bg-[#010205] hover:text-white focus:ring-black",
+          "bg-white text-black border-solid border-2 border-[#010205]  hover:bg-[#010205] hover:text-white focus:ring-black",
         disabled: "bg-gray-200 text-gray-500 cursor-not-allowed",
       },
       size: {
         sm: "text-sm px-3 py-1",
-        lg: "text-base px-8 py-4",
+        lg: "text-base px-10 py-3",
       },
     },
     defaultVariants: {
