@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Badge } from "./Badge";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  fuelType: "Electro" | "Hybrid" | "Gasoline";
+  fuelType: string;
   carImage: string;
   modelName: string;
   description: string;
