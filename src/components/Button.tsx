@@ -14,7 +14,7 @@ export const buttonVariants = cva(
         disabled: "bg-gray-200 text-gray-500 cursor-not-allowed",
       },
       size: {
-        sm: "text-sm px-5 py-2",
+        sm: "text-sm px-3 py-1",
         lg: "text-base px-8 py-4",
       },
     },
