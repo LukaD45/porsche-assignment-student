@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${getLato.className} antialiased`}>{children}</body>
+      <body className={`${getLato.className} antialiased bg-[#EEEFF2]`}>
+        {children}
+      </body>
     </html>
   );
 }
