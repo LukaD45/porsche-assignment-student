@@ -30,4 +30,9 @@ The app is built using React and Next.js, along with Tailwind CSS for a responsi
 
 # Screenshots
 
+Desktop view
+
 ![Desktop view](./screenshots/screenshot-1.png)
+![Desktop view](./screenshots/screenshot-2.png)
+![Desktop view](./screenshots/screenshot-3.png)
+![Desktop view](./screenshots/screenshot-4.png)
