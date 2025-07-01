@@ -79,7 +79,7 @@ const Footer = () => {
           <Image
             width={250}
             height={300}
-            src="/logo-white.png"
+            src="/logo-white.svg"
             alt="Porsche logo"
           />
         </Link>

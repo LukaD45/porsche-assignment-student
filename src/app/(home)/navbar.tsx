@@ -18,7 +18,7 @@ export const Navbar = () => {
         className="hidden sm:block col-span-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         href="#"
       >
-        <Image width={400} height={300} src="/logo.png" alt="Porsche logo" />
+        <Image width={400} height={300} src="/logo.svg" alt="Porsche logo" />
       </Link>
 
       <Link
