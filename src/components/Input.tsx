@@ -2,6 +2,40 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
+/*
+  Input komponenta
+    Custom Input komponenta dizajnirana za upotrebu u formama i drugim korisničkim sučeljima. Bazirana je na HTML <input> elementu, s unaprijed definiranim stilovima i mogućnošću dodatnog prilagođavanja putem Tailwind klasa.
+
+    Značajke
+      Jednostavan i čist dizajn
+      - TailwindCSS stilovi s fokus prstenom
+      - Prilagodljiva putem className propa
+      - Kompatibilna s raznim type vrijednostima (text, email, password...)
+
+    Instalacija
+      Ova komponenta koristi cn pomoćnu funkciju
+
+      NAPOMENA:
+       Ova komponenta pretpostavlja da se koristi TailwindCSS.
+       Provjeri da su te komponente dostupne i pravilno uvezene.
+  
+        Ako ne postoji u projektu:
+        --> npm install tailwindcss
+    
+    Korištenje
+      import { Input } from "@/components/Input";
+
+      export default function Page() {
+        return (
+          <Input
+            type="text"
+            placeholder="Enter your name"
+            className="border-gray-300 focus-visible:ring-blue-500"
+          />
+        );
+      }
+*/
+
 export const Input = ({
   className,
   type,
