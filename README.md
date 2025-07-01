@@ -4,6 +4,8 @@ This project is responsive React/Next.js application that showcases different ca
 
 The app is built using React and Next.js, along with Tailwind CSS for a responsive and accessible design. It also has some of accessibility features such as including visible blue outlines on elements when focused via keyboard navigation (TAB).
 
+Documentation for each custom component is provided through comments within the component file.
+
 # Technologies
 
 - React 19.0.0
