@@ -39,7 +39,9 @@ Desktop view
 
 Mobile view
 
-![Mobile view](./screenshots/screenshot-1.png)
-![Mobile view](./screenshots/screenshot-2.png)
-![Mobile view](./screenshots/screenshot-3.png)
-![Mobile view](./screenshots/screenshot-4.png)
+![Mobile view](./screenshots/mobile-1.png)
+![Mobile view](./screenshots/mobile-2.png)
+![Mobile view](./screenshots/mobile-3.png)
+![Mobile view](./screenshots/mobile-4.png)
+![Mobile view](./screenshots/mobile-5.png)
+![Mobile view](./screenshots/mobile-6.png)

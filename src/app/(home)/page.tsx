@@ -18,7 +18,7 @@ export default function ShowcasePage() {
 
   return (
     <div>
-      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-12 sm:py-8">
+      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-5 sm:py-20">
         <h1 className="text-xl sm:text-2xl font-bold text-center mb-10">
           Model overview
         </h1>

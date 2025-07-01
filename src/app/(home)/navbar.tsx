@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <nav className="grid grid-cols-3 sm:grid-cols-4 items-center justify-items-center h-30 px-4 sm:px-8">
+    <nav className="grid grid-cols-3 sm:grid-cols-4 items-center justify-items-center h-20 md:h-30 px-4 sm:px-8">
       <Link
         className="p-2 grid grid-cols-[auto_1fr] items-center gap-2 rounded-sm hover:bg-gray-300 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         href="#"
