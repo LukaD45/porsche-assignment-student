@@ -86,7 +86,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
         >
           <Badge className="mb-4 sm:mb-6">{fuelType}</Badge>
 
-          <div className="relative w-full aspect-[3/1] md:aspect-[3/1] mb-6">
+          <div className="relative w-full aspect-[3/1] mb-6">
             <Image
               src={carImage}
               alt={modelName}
