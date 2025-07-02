@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils";
 
       NAPOMENA:
        Ova komponenta pretpostavlja da se koristi TailwindCSS.
-       Provjeri da su te komponente dostupne i pravilno uvezene.
   
         Ako ne postoji u projektu:
         --> npm install tailwindcss
