@@ -69,13 +69,13 @@ export const Select = ({
   const selectedLabel = options.find((opt) => opt.value === value)?.label;
 
   return (
-    <div className={cn("relative inline-block text-sm  w-30", className)}>
+    <div className={cn("relative inline-block text-sm w-30", className)}>
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         className={cn(
-          "w-30 bg-white border border-gray-300 text-left px-2 py-0.5 flex items-center  rounded-md shadow-sm",
-          "hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus-visible:ring-blue-500",
+          "w-30 bg-white border border-select-border text-left px-2 py-0.5 flex items-center  rounded-md shadow-sm",
+          "hover:border-select-hover focus:outline-none focus:ring-2 focus:ring-black focus-visible:ring-ring",
           "transition duration-200 flex justify-between"
         )}
       >
@@ -87,15 +87,15 @@ export const Select = ({
         <>
           <ul
             className={cn(
-              "absolute z-10 mt-0.5 w-30 bg-white border border-gray-300 rounded-md shadow-md"
+              "absolute z-10 mt-0.5 w-30 bg-white border border-select-border rounded-md shadow-md"
             )}
           >
             {options.map((option) => (
               <li
                 key={option.value}
                 className={cn(
-                  "px-2 py-0.5 cursor-pointer hover:bg-gray-100",
-                  option.value === value && "bg-gray-100 "
+                  "px-2 py-0.5 cursor-pointer hover:bg-select-item-hover",
+                  option.value === value && "bg-select-item-hover"
                 )}
                 onClick={() => {
                   onChange(option.value);

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0e0e12] text-white px-6 sm:px-10 lg:px-20 py-12 sm:py-16">
+    <footer className="bg-footer text-white px-6 sm:px-10 lg:px-20 py-12 sm:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
         <div>
           <h1 className="text-xl font-bold">Current Region / Language</h1>
@@ -16,7 +16,7 @@ const Footer = () => {
           <p className="text-md mt-3">Do you have any questions?</p>
           <Button
             variant="secondary"
-            className="w-full sm:w-64 px-8 py-4 mt-5 text-lg rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+            className="w-full sm:w-64 px-8 py-4 mt-5 text-lg rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             size="lg"
           >
             <a
@@ -38,15 +38,25 @@ const Footer = () => {
         <h1 className="text-xl font-bold">Company</h1>
         <ul className="mt-5 space-y-2">
           <li className="text-md hover:underline">
-            <Link href="#">Investor relations</Link>
+            <Link
+              target="_blank"
+              href="https://investorrelations.porsche.com/en/"
+            >
+              Investor relations
+            </Link>
           </li>
           <li className="text-md hover:underline">
-            <Link href="#">Compliance</Link>
+            <Link
+              target="_blank"
+              href="https://www.porsche.com/international/legal/compliance/"
+            >
+              Compliance
+            </Link>
           </li>
         </ul>
       </div>
 
-      <hr className="border-gray-700" />
+      <hr className="border-footer-hr" />
 
       <div className="mt-10 space-y-4 text-sm leading-relaxed">
         <p>

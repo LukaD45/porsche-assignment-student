@@ -100,26 +100,28 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
             <h3 className="text-xl sm:text-2xl font-semibold mb-1">
               {modelName}
             </h3>
-            <p className="text-sm h-20 md:pr-5 text-gray-500 my-4">
+            <p className="text-sm h-20 md:pr-5 text-card-text my-4">
               {description}
             </p>
 
             <div className="space-y-4">
               <div>
                 <p className="text-xl font-bold">{acceleration} s</p>
-                <p className="text-gray-500 text-sm">
+                <p className="text-card-text text-sm">
                   Acceleration 0 - 100 km/h with Sport Chrono Package
                 </p>
               </div>
 
               <div>
                 <p className="text-xl font-bold">{power}</p>
-                <p className="text-gray-500 text-sm">Power (kW) / Power (PS)</p>
+                <p className="text-card-text text-sm">
+                  Power (kW) / Power (PS)
+                </p>
               </div>
 
               <div>
                 <p className="text-xl font-bold">{topSpd} km/h</p>
-                <p className="text-gray-500 text-sm">Top speed</p>
+                <p className="text-card-text text-sm">Top speed</p>
               </div>
             </div>
           </div>

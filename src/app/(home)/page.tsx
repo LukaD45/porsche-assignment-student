@@ -25,7 +25,7 @@ export default function ShowcasePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-6 mb-10 px-5 sm:px-0">
           <div className="md:col-start-2 3xl:col-start-3 md:justify-self-end">
-            <label className="block mb-2 text-sm font-medium text-gray-700">
+            <label className="block mb-2 text-sm font-medium text-sort-text">
               Sort by engine type:
             </label>
             <Select
@@ -56,7 +56,7 @@ export default function ShowcasePage() {
         </Button>
       </main>
       <section className="bg-white grid place-items-center px-4 py-16">
-        <div className="grid gap-6 text-center max-w-xl w-full">
+        <div className="grid gap-6 text-center">
           <h1 className="text-3xl sm:text-5xl font-medium uppercase">
             Join us on our ride!
           </h1>
@@ -65,7 +65,7 @@ export default function ShowcasePage() {
           </p>
           <Input
             type="email"
-            className="max-w-sm block mx-auto"
+            className="w-full  block mx-auto"
             placeholder="ivan.peric@gmail.com"
           />
         </div>

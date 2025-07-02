@@ -35,13 +35,13 @@ import { cn } from "@/lib/utils";
   */
 
 const badgeVariants = cva(
-  "inline-block px-3 py-2 text-sm text-balck  rounded-sm font-medium",
+  "inline-block px-3 py-2 text-sm text-badge-text  rounded-sm font-medium",
   {
     variants: {
       variant: {
-        electro: "bg-grey-100 ",
-        gasoline: "bg-gray-100 ",
-        hybrid: "bg-gray-100 ",
+        electro: "bg-badge ",
+        gasoline: "bg-badge ",
+        hybrid: "bg-badge ",
       },
     },
     defaultVariants: {

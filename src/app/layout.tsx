@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${getLato.className} antialiased bg-[#EEEFF2]`}>
+      <body className={`${getLato.className} antialiased bg-primary`}>
         <Navbar />
         {children}
         <Footer />
