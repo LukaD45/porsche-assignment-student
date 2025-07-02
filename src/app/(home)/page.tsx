@@ -10,7 +10,7 @@ import { Select } from "@/components/Select";
 import { Input } from "@/components/Input";
 
 export default function ShowcasePage() {
-  const [fuelType, setFuelType] = useState<string>("");
+  const [fuelType, setFuelType] = useState("");
 
   const filteredCars = fuelType
     ? cars.filter((car) => car.fuelType === fuelType)
@@ -18,7 +18,7 @@ export default function ShowcasePage() {
 
   return (
     <div>
-      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-5 sm:py-20">
+      <main className="min-h-screen px-4 sm:px-6 lg:px-12 py-5 sm:py-10">
         <h1 className="text-xl sm:text-2xl font-bold text-center mb-10">
           Model overview
         </h1>

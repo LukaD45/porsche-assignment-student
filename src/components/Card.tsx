@@ -92,7 +92,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
               alt={modelName}
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 10vw, 400px"
+              sizes="(max-width: 768px) 100vw, 400px"
             />
           </div>
 
